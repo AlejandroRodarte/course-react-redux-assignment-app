@@ -1,7 +1,10 @@
 import * as PersonsTypes from '../types/persons';
 
-export const addPerson = () => ({
-    type: PersonsTypes.ADD_PERSON
+export const addPerson = (person) => ({
+    type: PersonsTypes.ADD_PERSON,
+    payload: {
+        person
+    }
 });
 
 export const removePerson = (id) => ({

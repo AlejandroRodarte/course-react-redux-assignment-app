@@ -9,16 +9,9 @@ export default function(state = initialState, action) {
     switch (action.type) {
 
         case PersonsTypes.ADD_PERSON:
-
-            const newPerson = {
-                id: Math.random(),
-                name: 'Max',
-                age: Math.floor(Math.random() * 40)
-            };
-
             return {
                 ...state,
-                persons: [...state.persons, newPerson]
+                persons: [...state.persons, action.payload.person]
             };
 
         case PersonsTypes.REMOVE_PERSON:
